@@ -24,6 +24,9 @@ app.use('/api/categories', categoriesRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/carts', cartRoutes);
+// Cấu hình Express để phục vụ ảnh từ thư mục 'uploads'
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
 
 const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://admin:123@cluster0.xo2tj.mongodb.net/laptop_web';
 mongoose.connect(MONGO_URI)
