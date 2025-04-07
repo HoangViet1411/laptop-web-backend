@@ -25,7 +25,6 @@ app.use('/api/products', productRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/carts', cartRoutes);
 
-
 const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://admin:123@cluster0.xo2tj.mongodb.net/laptop_web';
 mongoose.connect(MONGO_URI)
   .then(() => console.log('MongoDB đã kết nối thành công.'))
